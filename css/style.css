@@ -1,0 +1,10 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+.fa-star, .fa-arrow-right-from-bracket{
+    cursor: pointer;
+}
+/* .container img {
+    width: 100%;
+    height: 100%;
+} */
