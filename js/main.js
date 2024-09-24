@@ -36,16 +36,12 @@ function GetData() {
   xml.send();
 }
 
-window.onload = function () {
-  GetData();
-  upDateBadge();
-};
+
 
 let recipesRow = document.querySelector(".recipesRow");
 let AllRecipes = []; // all recipes array
 function ShowData(recipes) {
   AllRecipes = recipes;
-  console.log(AllRecipes);
   let recipesHtml = AllRecipes.map(function (recipe) {
     return `<div class='col-md-4 col-12 my-4'>
                 <div class="card mx-auto" style="width: 18rem;">
@@ -53,7 +49,7 @@ function ShowData(recipes) {
           <div class="card-body">
             <h5 class="card-title">${recipe.name}</h5>
             <p class="card-text">tags: ${recipe.tags}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" onclick=addToCart(event,${recipe.id}) class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>`;
@@ -62,12 +58,52 @@ function ShowData(recipes) {
 }
 
 
+
+function addToCart(event, id) {
+  event.preventDefault();
+  let localStoRecipe = JSON.parse(localStorage.getItem("Recipes")) || [];
+  let chosenRecipe = AllRecipes.find((recipe) => recipe.id == id);
+  let cartHtml = `<div class='col-md-4 col-12 my-4'>
+                <div class="card mx-auto" style="width: 18rem;">
+          <img src="${chosenRecipe.image}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">${chosenRecipe.name}</h5>
+            <p class="card-text">tags: ${chosenRecipe.tags}</p>
+          </div>
+        </div>
+      </div>`;
+  recipesCart.innerHTML += cartHtml;
+  localStoRecipe.push(chosenRecipe);
+  localStorage.setItem("Recipes", JSON.stringify(localStoRecipe));
+  upDateBadge();
+}
+
+let recipesCart = document.querySelector(".recipesCart");
+function loadData() {
+  let localStoRecipe = JSON.parse(localStorage.getItem("Recipes")) || [];
+  localStoRecipe.forEach((recipe) => {
+    let cartHtml = `<div class='col-md-4 col-12 my-4'>
+          <div class="card mx-auto" style="width: 18rem;">
+              <img src="${recipe.image}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">${recipe.name}</h5>
+                  <p class="card-text">tags: ${recipe.tags}</p>
+              </div>
+          </div>
+      </div>`;
+    recipesCart.innerHTML += cartHtml;
+  });
+  upDateBadge()
+}
+
 function upDateBadge() {
   let badge = document.querySelector(".badge");
   let recipesCartLength = document.querySelectorAll(".recipesCart .col-12");
   badge.innerHTML = recipesCartLength.length;
 }
 
-
-
-
+window.onload = function () {
+  GetData();
+  upDateBadge();
+  loadData();
+};
