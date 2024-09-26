@@ -96,14 +96,31 @@ function loadData() {
   upDateBadge()
 }
 
+let deleteAllBtn = document.querySelector(".deleteAllBtn");
 function upDateBadge() {
   let badge = document.querySelector(".badge");
   let recipesCartLength = document.querySelectorAll(".recipesCart .col-12");
   badge.innerHTML = recipesCartLength.length;
+  if (recipesCartLength.length >= 0) {
+    deleteAllBtn.classList.remove('d-none')
+  } else {
+    deleteAllBtn.classList.remove("d-block");
+  }
+}
+
+deleteAllBtn.onclick = function () {
+  DeleteAll()
+}
+
+function DeleteAll() {
+  recipesCart.innerHTML = ''
+  localStorage.removeItem('Recipes');
+  upDateBadge()
 }
 
 window.onload = function () {
   GetData();
   upDateBadge();
-  loadData();
+  loadDataInCart();
 };
+
