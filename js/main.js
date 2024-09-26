@@ -20,7 +20,7 @@ redirectBasedOnLoginStatus();
 let arrow = document.querySelector(".fa-arrow-right-from-bracket");
 
 arrow.onclick = function () {
-  localStorage.clear()
+  localStorage.clear();
   window.location = "login.html";
 };
 
@@ -54,54 +54,11 @@ function ShowData(recipes) {
         </div>
     </div>
 </div>
-`}).join("");
-  recipesRow.innerHTML = recipesHtml;
-}
-
-function addToCart(event, id) {
-  event.preventDefault();
-  let localStoRecipe = JSON.parse(localStorage.getItem("Recipes")) || [];
-  let chosenRecipe = AllRecipes.find((recipe) => recipe.id == id);
-  let cartHtml = `<div class='col-md-4 col-12 my-4'>
-                <div class="card mx-auto" style="width: 18rem;">
-          <img src="${chosenRecipe.image}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${chosenRecipe.name}</h5>
-            <p class="card-text">tags: ${chosenRecipe.tags}</p>
-          </div>
-        </div>
-      </div>`;
-  recipesCart.innerHTML += cartHtml;
-  localStoRecipe.push(chosenRecipe);
-  localStorage.setItem("Recipes", JSON.stringify(localStoRecipe));
-  upDateBadge();
-}
-
-<<<<<<< HEAD
-let recipesCart = document.querySelector(".recipesCart");
-function loadDataInCart() {
-=======
-let recipesRow = document.querySelector(".recipesRow");
-let AllRecipes = []; // all recipes array
-function ShowData(recipes) {
-  AllRecipes = recipes;
-  let recipesHtml = AllRecipes.map(function (recipe) {
-    return `<div class='col-md-4 col-12 my-4'>
-                <div class="card mx-auto" style="width: 18rem;">
-          <img src="${recipe.image}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${recipe.name}</h5>
-            <p class="card-text">tags: ${recipe.tags}</p>
-            <a href="#" onclick=addToCart(event,${recipe.id}) class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>`;
+`;
   }).join("");
   recipesRow.innerHTML = recipesHtml;
 }
 
-
-
 function addToCart(event, id) {
   event.preventDefault();
   let localStoRecipe = JSON.parse(localStorage.getItem("Recipes")) || [];
@@ -122,8 +79,7 @@ function addToCart(event, id) {
 }
 
 let recipesCart = document.querySelector(".recipesCart");
-function loadData() {
->>>>>>> 153c397fda83d14b5de84723bbe84f31e44e0396
+function loadDataInCart() {
   let localStoRecipe = JSON.parse(localStorage.getItem("Recipes")) || [];
   localStoRecipe.forEach((recipe) => {
     let cartHtml = `<div class='col-md-4 col-12 my-4'>
@@ -137,7 +93,7 @@ function loadData() {
       </div>`;
     recipesCart.innerHTML += cartHtml;
   });
-  upDateBadge()
+  upDateBadge();
 }
 
 let deleteAllBtn = document.querySelector(".deleteAllBtn");
@@ -146,20 +102,20 @@ function upDateBadge() {
   let recipesCartLength = document.querySelectorAll(".recipesCart .col-12");
   badge.innerHTML = recipesCartLength.length;
   if (recipesCartLength.length >= 0) {
-    deleteAllBtn.classList.remove('d-none')
+    deleteAllBtn.classList.remove("d-none");
   } else {
     deleteAllBtn.classList.remove("d-block");
   }
 }
 
 deleteAllBtn.onclick = function () {
-  DeleteAll()
-}
+  DeleteAll();
+};
 
 function DeleteAll() {
-  recipesCart.innerHTML = ''
-  localStorage.removeItem('Recipes');
-  upDateBadge()
+  recipesCart.innerHTML = "";
+  localStorage.removeItem("Recipes");
+  upDateBadge();
 }
 
 window.onload = function () {
@@ -167,7 +123,3 @@ window.onload = function () {
   upDateBadge();
   loadDataInCart();
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> 153c397fda83d14b5de84723bbe84f31e44e0396

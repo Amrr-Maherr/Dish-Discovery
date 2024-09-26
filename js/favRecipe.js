@@ -68,7 +68,6 @@ function DeleteRecipe(id) {
     if (warning) {
       let deletedRecipe = document.querySelector(`#recipe${id}`);
       deletedRecipe.remove();
-      let LocalData = JSON.stringify(localStorage.getItem("Recipes")) || []
     }
 }
 

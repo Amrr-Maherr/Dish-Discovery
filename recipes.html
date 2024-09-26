@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,37 +14,39 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Recipes</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Dish Discovery</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a aria-current='page' class='nav-link active' href='/'>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="recipes.html">Recipes</a>
+                        <a class='nav-link' href='recipes.html'>Recipes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="favRec.html">Favorite Recipe</a>
+                        <a class='nav-link' href='favRec.html'>Favorite Recipe</a>
                     </li>
                 </ul>
-                
+
                 <div class="d-flex buttons">
-                    <a class="btn btn-outline-primary me-2" href="login.html">Log In</a>
-                    <a class="btn btn-outline-secondary" href="signin.html">Sign Up</a>
+                    <a class='btn btn-outline-primary me-2' href='/login'>Log In</a>
+                    <a class='btn btn-outline-secondary' href='/signin'>Sign Up</a>
                 </div>
                 <div class="d-flex userInfo align-items-center justify-contnt-center d-none gap-2 fs-5">
-                    <a class="me-2" href="login.html">
+                    <a class='me-2' href='/login'>
                     </a>
                     <i class="fa-solid fa-arrow-right-from-bracket text-dark"></i>
                     <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
@@ -57,92 +60,78 @@
             </div>
         </div>
     </nav>
-<div class="jumbotron jumbotron-fluid my-4 p-3">
+    <div class="jumbotron jumbotron-fluid my-4 p-3">
+        <div class="container text-center my-4">
+            <h1 class="display-4">Explore Our Delicious Recipes</h1>
+            <p class="lead">Find a variety of tasty recipes for every occasion.</p>
+        </div>
+    </div>
     <div class="container text-center my-4">
-        <h1 class="display-4">Explore Our Delicious Recipes</h1>
-        <p class="lead">Find a variety of tasty recipes for every occasion.</p>
-    </div>
-</div>
-<div class="container text-center my-4">
-    <div class="row recipesRow">
-        <!--  -->
-    </div>
-<<<<<<< HEAD
-    <div class="row">
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Favorite recipes</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body recipesCart">
-                <!-- cart -->
-            </div>
-        <div class="d-grid gap-2 col-6 mx-auto w-100 my-3">
-<<<<<<< HEAD
-            <a class="btn btn-primary" href="favRec.html" role="button">Show Favorite Recipes</a>
-            <button class="btn btn-danger deleteAllBtn d-none" type="button">Delete All Recipes</button>
-=======
-            <a class="btn btn-primary" href="favRec.html">Show Favorite Recipes</a>
-            <button class="btn btn-danger deleteBtn" type="button">Delete all</button>
->>>>>>> 153c397fda83d14b5de84723bbe84f31e44e0396
+        <div class="row recipesRow">
+            <!--  -->
         </div>
-        </div>
-    </div>
-=======
->>>>>>> 53097506035b2e7c97f78e9f2dcaa57b9faa6804
-</div>
-<<<<<<< HEAD
-<footer class="bg-body-tertiary text-center text-lg-start mt-5">
-=======
-    <footer class="bg-body-tertiary text-center text-lg-start mt-5">
->>>>>>> 153c397fda83d14b5de84723bbe84f31e44e0396
-    <div class="container p-4">
-        <!-- Links Section -->
         <div class="row">
-            <!-- Logo and About -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Dish Discovery</h5>
-                <p>Discover the best recipes from around the world and manage your favorite dishes easily.</p>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Quick Links</h5>
-                <ul class="list-unstyled mb-0">
-                    <li><a href="index.html" class="text-dark">Home</a></li>
-                    <li><a href="recipes.html" class="text-dark">Recipes</a></li>
-                    <li><a href="favRec.html" class="text-dark">Favorite Recipe</a></li>
-                </ul>
-            </div>
-
-            <!-- Account Links -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">My Account</h5>
-                <ul class="list-unstyled mb-0">
-                    <li><a href="login.html" class="text-dark">Log In</a></li>
-                    <li><a href="signin.html" class="text-dark">Sign Up</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Contact Us</h5>
-                <p>Email: support@dishdiscovery.com</p>
-                <p>Phone: +123 456 7890</p>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Favorite recipes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body recipesCart">
+                    <!-- cart -->
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto w-100 my-3">
+                    <a class='btn btn-primary' href='/favrec' role='button'>Show Favorite Recipes</a>
+                    <button class="btn btn-danger deleteAllBtn d-none" type="button">Delete All Recipes</button>
+                </div>
             </div>
         </div>
     </div>
+    <footer class="bg-body-tertiary text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <!-- Links Section -->
+            <div class="row">
+                <!-- Logo and About -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Dish Discovery</h5>
+                    <p>Discover the best recipes from around the world and manage your favorite dishes easily.</p>
+                </div>
 
-    <!-- Copyright Section -->
-    <div class="text-center p-3 bg-light">
-        <span>&copy; 2024 Dish Discovery. All Rights Reserved.</span>
-    </div>
-</footer>
-<<<<<<< HEAD
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class='text-dark' href='/'>Home</a></li>
+                        <li><a class='text-dark' href='/recipes'>Recipes</a></li>
+                        <li><a class='text-dark' href='/favrec'>Favorite Recipe</a></li>
+                    </ul>
+                </div>
 
-=======
->>>>>>> 153c397fda83d14b5de84723bbe84f31e44e0396
+                <!-- Account Links -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">My Account</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class='text-dark' href='login.html'>Log In</a></li>
+                        <li><a class='text-dark' href='signin.html'>Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact Us</h5>
+                    <p>Email: support@dishdiscovery.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="text-center p-3 bg-light">
+            <span>&copy; 2024 Dish Discovery. All Rights Reserved.</span>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
+
 </html>
