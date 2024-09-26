@@ -17,3 +17,9 @@ function redirectBasedOnLoginStatus() {
     }
 }
 redirectBasedOnLoginStatus();
+let arrow = document.querySelector(".fa-arrow-right-from-bracket");
+
+arrow.onclick = function () {
+  localStorage.clear();
+  window.location = "login.html";
+};
