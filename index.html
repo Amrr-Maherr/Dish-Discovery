@@ -18,7 +18,7 @@
     <title>Dish Discovery</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Dish Discovery</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -45,12 +45,6 @@
                     <a class="me-2" href="login.html">
                     </a>
                     <i class="fa-solid fa-arrow-right-from-bracket text-dark"></i>
-                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                        aria-controls="offcanvasScrolling" class="btn position-relative">
-                        View Favorites
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        </span>
-                    </button>
                     <a class="userN text-dark text-decoration-none" href=""></a>
                 </div>
             </div>
@@ -105,18 +99,49 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Favorite recipes</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body recipesCart">
-            <!-- cart -->
+<footer class="bg-body-tertiary text-center text-lg-start mt-5">
+    <div class="container p-4">
+        <!-- Links Section -->
+        <div class="row">
+            <!-- Logo and About -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Dish Discovery</h5>
+                <p>Discover the best recipes from around the world and manage your favorite dishes easily.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Quick Links</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="index.html" class="text-dark">Home</a></li>
+                    <li><a href="recipes.html" class="text-dark">Recipes</a></li>
+                    <li><a href="favRec.html" class="text-dark">Favorite Recipe</a></li>
+                </ul>
+            </div>
+
+            <!-- Account Links -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">My Account</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="login.html" class="text-dark">Log In</a></li>
+                    <li><a href="signin.html" class="text-dark">Sign Up</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <p>Email: support@dishdiscovery.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- Copyright Section -->
+    <div class="text-center p-3 bg-light">
+        <span>&copy; 2024 Dish Discovery. All Rights Reserved.</span>
+    </div>
+</footer>
     <script src="js/main.js"></script>
 </body>
 </html>
