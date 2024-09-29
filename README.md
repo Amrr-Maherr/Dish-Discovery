@@ -6,7 +6,7 @@ Dish Discovery is a web application designed to help users explore and manage re
 
 ## 🚀 Live Demo
 
-You can view the live demo of Dish Discovery at [amrr-maherr.github.io/WorldBrief/](https://amrr-maherr.github.io/WorldBrief/).
+You can view the live demo of Dish Discovery at [amrr-maherr.github.io/WorldBrief/](https://amrr-maherr.github.io/Dish-Discovery/).
 
 ## 📋 Features
 
