@@ -61,7 +61,6 @@ To set up this project locally, follow these steps:
 - **CSS**
 - **JavaScript**
 - **Bootstrap**: For responsive design.
-- **AOS (Animate On Scroll)**: Library for animations.
 - **Dummy JSON API**: For recipe data.
 
 ---
